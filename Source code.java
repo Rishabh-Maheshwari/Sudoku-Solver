@@ -6,7 +6,9 @@ public class Solution {
 	public static boolean sudokuSolver(int board[][]){
 		
 		 boolean sol= sudoku(board,0,0);
-      for(int i=0;i<9;i++)
+       if(sol)
+     {
+		for(int i=0;i<9;i++)
       {
         for(int j=0;j<9;j++)
         {
@@ -14,6 +16,7 @@ public class Solution {
         }
         System.out.println("");
       }
+       }
       return sol;
 	}
   public static boolean sudoku(int[][] board, int i,int j)
